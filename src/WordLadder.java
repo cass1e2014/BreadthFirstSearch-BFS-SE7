@@ -26,7 +26,17 @@ All words contain only lowercase alphabetic characters.
  *
  */
 public class WordLadder {
-	public int ladderLength(String beginWord, String endWord, Set<String> wordDict) {
+	public static void main(String[] args){
+		Set<String> dict = new HashSet<String>();
+		dict.add("hot");
+		dict.add("dot");
+		dict.add("dog");
+		dict.add("lot");
+		dict.add("log");
+		System.out.println(ladderLength("hit", "cog", dict));
+	}
+	
+	public static int ladderLength(String beginWord, String endWord, Set<String> wordDict) {
 		if(beginWord == null || endWord == null || wordDict == null){
 			return 0;
 		}
